@@ -21,9 +21,9 @@
                     <div class="bude-svadba">
                         <h1>BUDE SVADBA!</h1>
                         <div class="countdown">
-                            <div class="countdown__circle">110 dní</div>
-                            <div class="countdown__circle">10 hod.</div>
-                            <div class="countdown__circle">15 min.</div>
+                            <div id="days" class="countdown__circle"></div>
+                            <div id="hours" class="countdown__circle"></div>
+                            <div id="minutes" class="countdown__circle"></div>
                         </div>
                     </div>
                     <div>
@@ -33,5 +33,30 @@
             </section>
         </div>
     </main>
+    <script>
+        const deadline = new Date("Aug 28, 2020 16:00:00").getTime(); 
+
+        function countDown() {
+            const now = new Date().getTime(); 
+            const t = deadline - now;
+            const days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+            const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
+            const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("days").innerHTML = days > 1 ? days + " dní" : days + " deň";
+            document.getElementById("hours").innerHTML = hours + " hod.";
+            document.getElementById("minutes").innerHTML = minutes + " min.";
+        }
+
+        countDown();
+
+        const x = setInterval(function() { 
+            countDown();
+
+            if (t < 0) { 
+                clearInterval(x);
+            } 
+        }, 60000); 
+        </script>
+    </script>
 </body>
 </html>
