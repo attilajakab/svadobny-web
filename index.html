@@ -24,6 +24,7 @@
                             <div id="days" class="countdown__circle"></div>
                             <div id="hours" class="countdown__circle"></div>
                             <div id="minutes" class="countdown__circle"></div>
+                            <div id="seconds" class="countdown__circle"></div>
                         </div>
                     </div>
                     <div>
@@ -42,9 +43,11 @@
             const days = Math.floor(t / (1000 * 60 * 60 * 24)); 
             const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
             const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((t % (1000 * 60)) / 1000);
             document.getElementById("days").innerHTML = days > 1 ? days + " dní" : days + " deň";
             document.getElementById("hours").innerHTML = hours + " hod.";
             document.getElementById("minutes").innerHTML = minutes + " min.";
+            document.getElementById("seconds").innerHTML = seconds + " sek.";
         }
 
         countDown();
@@ -55,7 +58,7 @@
             if (t < 0) { 
                 clearInterval(x);
             } 
-        }, 60000); 
+        }, 1000); 
         </script>
     </script>
 </body>
