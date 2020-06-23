@@ -1,0 +1,77 @@
+<!-- 
+    # Type:
+    MAP Monthly Averages Prices
+        - Daily - moving averages - calculated based on daily official prices for the month sofar.
+        - Monthly - published on the last business day of the month. The report includes all monthly values that have been published for the year so far.
+
+    # Contract
+    Non Ferrous (NFG):
+    - AA Aluminium Alloy
+    - AH Aluminium
+    - CA Copper
+    - CO Cobalt
+    - NA NASAAC
+    - NI Nickel
+    - PB Lead
+    - SN Tin
+    - ZS Zinc
+    Precious (PRE)
+    - AU LME Gold
+    - AG LME Silver
+ -->
+<lme status="0">
+    <date>20170308</date>
+    <averages status="0">
+        <daily>
+            <row_daily status="0" code="AA" type="M">
+                <currency>USD</currency>
+                <avg_item prompt_date="CASH">
+                    <bid>1662.0</bid>
+                    <ask>1672.0</ask>
+                </avg_item>
+                <avg_item prompt_date="3M">
+                    <bid>1674.0</bid>
+                    <ask>1684.0</ask>
+                </avg_item>
+                <avg_item prompt_date="DEC1" pd_value="20181219">
+                    <bid>1679.0</bid>
+                    <ask>1689.0</ask>
+                </avg_item>
+            </row_daily>
+        </daily>
+        <monthly>
+            <row_monthly status="0" code="AA" type="M" pq="MAP">
+                <month value="Jan">
+                    <currency>USD</currency>
+                    <avg_item prompt_date="CASH">
+                        <bid>1619.5</bid>
+                        <ask>1629.5</ask>
+                    </avg_item>
+                    <avg_item prompt_date="3M">
+                        <bid>1632.0</bid>
+                        <ask>1642.0</ask>
+                    </avg_item>
+                    <avg_item prompt_date="DEC1" pd_value="20181219">
+                        <bid>1655.5</bid>
+                        <ask>1665.5</ask>
+                    </avg_item>
+                </month>
+                <month value="Feb">
+                    <currency>USD</currency>
+                    <avg_item prompt_date="CASH">
+                        <bid>1689.09</bid>
+                        <ask>1698.7</ask>
+                    </avg_item>
+                    <avg_item prompt_date="3M">
+                        <bid>1698.26</bid>
+                        <ask>1708.26</ask>
+                    </avg_item>
+                    <avg_item prompt_date="DEC1" pd_value="20181219">
+                        <bid>1718.26</bid>
+                        <ask>1728.26</ask>
+                    </avg_item>
+                </month>
+            </row_monthly>
+        </monthly>
+    </averages>
+</lme>
