@@ -11,16 +11,18 @@
     <title>👰 Svadba Maťka & Ati</title>
 </head>
 <body>
-    <nav class="container navigation">
-        <div>
-            <h3 class="heading-matka-ati">MAŤKA <span>&</span> ATI</h3>
-        </div>
-        <div>
-            <ul class="navigation-items">
-                <li class="navigation-item"><a href="#">Kedy a kde</a></li>
-                <li class="navigation-item"><a href="#">Svadobný program</a></li>
-                <li class="navigation-item"><a href="#">Galéria</a></li>
-            </ul>
+    <nav class="navigation">
+        <div class="container">
+            <div>
+                <h3 class="heading-matka-ati">MAŤKA <span>&</span> ATI</h3>
+            </div>
+            <div>
+                <ul class="navigation-items">
+                    <li class="navigation-item"><a href="#">Kedy a kde</a></li>
+                    <li class="navigation-item"><a href="#">Svadobný program</a></li>
+                    <li class="navigation-item"><a href="#">Galéria</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <main class="container">
@@ -57,12 +59,14 @@
             document.getElementById("hours").innerHTML = hours + " hod.";
             document.getElementById("minutes").innerHTML = minutes + " min.";
             document.getElementById("seconds").innerHTML = seconds + " sek.";
+
+            return t;
         }
 
         countDown();
 
         const x = setInterval(function() { 
-            countDown();
+            t = countDown();
 
             // TODO: Fix undefined t here.
             if (t < 0) { 
