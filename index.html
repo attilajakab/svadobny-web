@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <title>👰 Svadba Maťka & Ati</title>
 </head>
 <body>
+    <nav class="container navigation">
+        <div>
+            <h3 class="heading-matka-ati">MAŤKA <span>&</span> ATI</h3>
+        </div>
+        <div>
+            <ul class="navigation-items">
+                <li class="navigation-item"><a href="#">Kedy a kde</a></li>
+                <li class="navigation-item"><a href="#">Svadobný program</a></li>
+                <li class="navigation-item"><a href="#">Galéria</a></li>
+            </ul>
+        </div>
+    </nav>
     <main class="container">
         <div class="row">
             <section class="section-welcome">
-                <h3>MAŤKA <span>&</span> ATI</h3>
                 <div class="bude-svadba-container">
                     <div class="bude-svadba">
                         <h1>BUDE SVADBA!</h1>
@@ -55,6 +64,7 @@
         const x = setInterval(function() { 
             countDown();
 
+            // TODO: Fix undefined t here.
             if (t < 0) { 
                 clearInterval(x);
             } 
