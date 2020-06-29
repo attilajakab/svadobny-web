@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="./js/smooth-scroll.min.js"></script>
     <title>👰 Svadba Maťka & Ati</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
             </div>
             <div>
                 <ul class="navigation-items">
-                    <li class="navigation-item"><a href="place-and-date">Kedy a kde</a></li>
+                    <li class="navigation-item"><a data-scroll href="#place-and-date">Kedy a kde</a></li>
                     <li class="navigation-item"><a href="#">Svadobný program</a></li>
                     <li class="navigation-item"><a href="#">Galéria</a></li>
                 </ul>
@@ -92,23 +93,11 @@
             if (t < 0) { 
                 clearInterval(x);
             } 
-        }, 1000); 
+        }, 1000);
 
-        const anchors = document.querySelectorAll('.navigation-item a');
-
-        for (let i = 0; i < anchors.length; i++) {
-            anchors[i].addEventListener('click', function(event) {
-                event.preventDefault();
-
-                console.log(anchors[i].href);
-
-                document.getElementById(anchors[i].getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        }
-
-        </script>
+        const scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000
+        });
     </script>
 </body>
 </html>
