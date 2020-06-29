@@ -18,7 +18,7 @@
             </div>
             <div>
                 <ul class="navigation-items">
-                    <li class="navigation-item"><a href="#">Kedy a kde</a></li>
+                    <li class="navigation-item"><a href="place-and-date">Kedy a kde</a></li>
                     <li class="navigation-item"><a href="#">Svadobný program</a></li>
                     <li class="navigation-item"><a href="#">Galéria</a></li>
                 </ul>
@@ -38,9 +38,29 @@
                             <div id="seconds" class="countdown__circle"></div>
                         </div>
                     </div>
-                    <div>
+                    <div class="img-container">
                         <img src="./imgs/us.jpg" alt="matka and ati">
                     </div>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section id="place-and-date" class="section-place-and-date">
+                <div class="sobas">
+                    <h3>Sobáš</h3>
+                    <p>16:00</p>
+                    <p>Evanjelický kostol</p>
+                    <p>Mlynská 23</p>
+                    <p>Košice</p>
+                </div>
+                <div class="obrazok">
+                    <img src="./imgs/flowers_1.jpg" alt="flower">
+                </div>
+                <div class="oslava">
+                    <h3>Oslava</h3>
+                    <p>Hotel Dália</p>
+                    <p>Löfflerova 1</p>
+                    <p>Košice</p>
                 </div>
             </section>
         </div>
@@ -73,6 +93,21 @@
                 clearInterval(x);
             } 
         }, 1000); 
+
+        const anchors = document.querySelectorAll('.navigation-item a');
+
+        for (let i = 0; i < anchors.length; i++) {
+            anchors[i].addEventListener('click', function(event) {
+                event.preventDefault();
+
+                console.log(anchors[i].href);
+
+                document.getElementById(anchors[i].getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+
         </script>
     </script>
 </body>

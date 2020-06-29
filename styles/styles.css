@@ -40,7 +40,7 @@ body {
 }
 
 .navigation {
-  position: fixed;
+  position: absolute;
   background-color: #fff;
   width: 100%;
 }
@@ -66,6 +66,10 @@ body {
   padding: 7px 20px;
 }
 
+.navigation-item a:hover {
+  background-color: rgba(247, 222, 216, .9);
+}
+
 /* Section welcome */
 .section-welcome {
   height: 100vh;
@@ -76,17 +80,37 @@ body {
 
 .section-welcome img {
   width: 100%;
+  display: none;
 }
 
 .bude-svadba-container {
   background-color: #F7DED8;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bude-svadba-container > * {
+  flex: 1;
+}
+
+.img-container {
+  background-image: url('../imgs/us.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.bude-svadba {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .bude-svadba h1 {
   text-align: center;
   color: #79797A;
   margin-top: 0;
-  padding-top: 20px;
   font-weight: normal;
 }
 
@@ -110,6 +134,69 @@ body {
 
 .countdown__circle + .countdown__circle {
   margin-left: 15px;
+}
+
+/* Section date and place */
+.section-place-and-date {
+  background-color: #F7DED8;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-place-and-date .obrazok img {
+  width: 28vh;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin-bottom: 25px;
+}
+
+.section-place-and-date .sobas {
+  margin-bottom: 25px;
+}
+
+.section-place-and-date .oslava, .section-place-and-date .sobas {
+  background-color: #FFF9F9;
+  width: 28vh;
+  height: 28vh;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+}
+
+.section-place-and-date .sobas h3:nth-child(1), .section-place-and-date .oslava h3:nth-child(1) {
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+/* kostol */
+.section-place-and-date .sobas p:nth-child(3) {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+/* ulica */
+.section-place-and-date .sobas p:nth-child(4) {
+  margin: 0;
+}
+
+/* mesto */
+.section-place-and-date .sobas p:nth-child(5) {
+  margin: 0;
+}
+
+.section-place-and-date .oslava p {
+  margin: 0;
+}
+
+.section-place-and-date .oslava p:nth-child(2) {
+  margin-top: 25px;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -153,12 +240,18 @@ body {
   }
 
   .section-welcome img {
+    display: inline-block;
     transform: translateX(160px);
   }
 
   .bude-svadba-container {
     position: relative;
     overflow: hidden;
+    height: auto;
+  }
+
+  .img-container {
+    background-image: none;
   }
 
   .bude-svadba {
