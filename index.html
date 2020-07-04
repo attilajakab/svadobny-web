@@ -20,8 +20,8 @@
             <div>
                 <ul class="navigation-items">
                     <li class="navigation-item"><a data-scroll href="#place-and-date">Kedy a kde</a></li>
-                    <li class="navigation-item"><a href="#">Svadobný program</a></li>
-                    <li class="navigation-item"><a href="#">Galéria</a></li>
+                    <li class="navigation-item"><a href="#wedding-schedule">Svadobný program</a></li>
+                    <li class="navigation-item"><a href="#wedding-photos">Galéria</a></li>
                 </ul>
             </div>
         </div>
@@ -65,7 +65,25 @@
                 </div>
             </section>
         </div>
+        <div class="row">
+            <section id="wedding-schedule" class="section-wedding-schedule">
+                <div>
+                    <img src="./imgs/icons/tools.png">
+                    <h2>Svadobný program dostupný už čoskoro :)</h2>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section id="wedding-photos" class="section-wedding-photos">
+                <div class="img-container"></div>
+                <div>
+                    <h2>Fotky zo svadobného dňa nájdete tu:</h2>
+                    <img src="./imgs/icons/heart.png">
+                </div>
+            </section>
+        </div>
     </main>
+
     <script>
         const deadline = new Date("Aug 28, 2020 16:00:00").getTime(); 
 
@@ -87,7 +105,7 @@
         countDown();
 
         const x = setInterval(function() { 
-            t = countDown();
+            const t = countDown();
 
             // TODO: Fix undefined t here.
             if (t < 0) { 

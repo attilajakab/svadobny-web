@@ -94,7 +94,7 @@ body {
   flex: 1;
 }
 
-.img-container {
+.section-welcome .img-container {
   background-image: url('../imgs/us.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -192,6 +192,59 @@ body {
   margin-bottom: 5vh;
 }
 
+/* Section wedding schedule */
+.section-wedding-schedule {
+  background-color: #BDDAD5;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 50px solid #95AAA6;
+  padding: 10px;
+}
+
+.section-wedding-schedule h2 {
+  font-weight: 600;
+}
+
+/* Section wedding schedule */
+.section-wedding-photos {
+  background-color: #EB7F79;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-wedding-photos .img-container {
+  width: 100%;
+  height: 200px;
+  background-image: url('../imgs/flowers_2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-bottom: 2px solid #444;
+}
+
+.section-wedding-photos h2 {
+  font-weight: 600;
+}
+
+.section-wedding-photos div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -244,7 +297,7 @@ body {
     height: auto;
   }
 
-  .img-container {
+  .section-welcome .img-container {
     background-image: none;
   }
 
@@ -261,6 +314,59 @@ body {
 
   .countdown {
     margin: 0;
+  }
+
+  /* Section place and date */
+  .section-place-and-date {
+    position: relative;
+  }
+
+  .section-place-and-date .sobas {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+
+  .section-place-and-date .oslava {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+  }
+
+  .section-place-and-date .sobas, .section-place-and-date .oslava, .section-place-and-date .obrazok img {
+    font-size: 2.4vh;
+    width: 33vh;
+    height: 33vh;
+  }
+
+  /* Section wedding schedule */
+  .section-wedding-schedule {
+    border-top: none;
+    border-left: 50px solid #95AAA6;
+  }
+
+  .section-wedding-schedule h2 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .section-wedding-schedule img {
+    vertical-align: middle;
+  }
+
+  .section-wedding-photos {
+    position: relative;
+  }
+
+  .section-wedding-photos .img-container {
+    width: 80%;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 2px solid #444;
+    border-right: 0;
   }
 }
 
