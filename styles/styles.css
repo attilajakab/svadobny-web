@@ -246,6 +246,17 @@ body {
   padding: 10px;
 }
 
+/* Section about us */
+.section-about-us {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
@@ -274,6 +285,15 @@ body {
 
   .heading-matka-ati {
     text-align: left;
+  }
+
+  .heading-matka-ati a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .heading-matka-ati a:visited {
+    color: #000;
   }
 
   .navigation-items {
@@ -373,4 +393,47 @@ body {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
+}
+
+
+/* 
+ * PHOTO GRID
+ */
+.photo-grid-row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Create four equal columns that sits next to each other */
+.photo-grid-column {
+  -ms-flex: 33%; /* IE10 */
+  flex: 33%;
+  max-width: 33%;
+}
+
+.photo-grid-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .photo-grid-column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .photo-grid-column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
