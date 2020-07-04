@@ -12,7 +12,10 @@
     <title>👰 Svadba Maťka & Ati</title>
 </head>
 <body>
-    <nav class="navigation">
+    <a href="#navigation" id="back-to-top-btn" title="Go to top">
+        <img src="./imgs/icons/top.png">
+    </a>
+    <nav class="navigation" id="navigation">
         <div class="container">
             <div>
                 <h3 class="heading-matka-ati"><a href="#about-us">MAŤKA <span>&</span> ATI</a></h3>
@@ -146,8 +149,27 @@
         }, 1000);
 
         const scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 1000
+            speed: 750
         });
+
+        mybutton = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // function topFunction() {
+        //     document.body.scrollTop = 0; // For Safari
+        //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        // }
     </script>
 </body>
 </html>

@@ -17,6 +17,25 @@ body {
   flex: 1;
 }
 
+/* Back to top */
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 1000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+  border-radius: 50%;
+}
+
+#back-to-top-btn img {
+  background-color: #fff;
+  border-radius: 50%;
+}
+
 /* Navigation */
 .heading-matka-ati {
   text-align: center;
@@ -24,6 +43,11 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 20px 0;
+}
+
+.heading-matka-ati a {
+  text-decoration: none;
+  color: #000;
 }
 
 .heading-matka-ati span {
@@ -285,11 +309,6 @@ body {
 
   .heading-matka-ati {
     text-align: left;
-  }
-
-  .heading-matka-ati a {
-    text-decoration: none;
-    color: #000;
   }
 
   .heading-matka-ati a:visited {
