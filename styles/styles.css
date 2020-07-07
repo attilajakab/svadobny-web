@@ -176,11 +176,20 @@ body {
   align-items: center;
 }
 
+.section-place-and-date .obrazok {
+  position: relative;
+}
+
+.section-place-and-date .obrazok .datum {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+}
+
 .section-place-and-date .obrazok img {
   width: 28vh;
   border-radius: 50%;
   border: 1px solid #ccc;
-  margin-bottom: 25px;
 }
 
 .section-place-and-date .sobas {
@@ -361,6 +370,10 @@ body {
   /* Section place and date */
   .section-place-and-date {
     position: relative;
+  }
+
+  .section-place-and-date .obrazok .datum {
+    font-size: 2.4vh;
   }
 
   .section-place-and-date .sobas {
