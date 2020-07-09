@@ -196,6 +196,10 @@ body {
   margin-bottom: 25px;
 }
 
+.section-place-and-date .obrazok {
+  margin-bottom: 25px;
+}
+
 .section-place-and-date .oslava, .section-place-and-date .sobas {
   background-color: #FFF9F9;
   width: 28vh;
