@@ -281,7 +281,7 @@ body {
 }
 
 .section-wedding-schedule .images-container img {
-  width: 45px;
+  width: 40px;
 }
 
 .section-wedding-schedule .images-container span {
@@ -455,6 +455,10 @@ body {
   .section-wedding-schedule .images-container > * {
     font-size: 18px;
     margin-bottom: 15px;
+  }
+
+  .section-wedding-schedule .images-container img {
+    width: 45px;
   }
 
   .section-wedding-photos {
