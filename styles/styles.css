@@ -251,18 +251,41 @@ body {
   background-color: #BDDAD5;
   width: 100%;
   height: 100vh;
-  text-align: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border-top: 50px solid #95AAA6;
   padding: 10px;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.section-wedding-schedule h2 {
+.section-wedding-schedule .bg-img {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  right: -280px;
+  border-radius: 13%;
+}
+
+.section-wedding-schedule .images-container > * {
   font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.section-wedding-schedule .images-container > *:not(:last-of-type) {
+
+}
+
+.section-wedding-schedule .images-container img {
+  width: 45px;
+}
+
+.section-wedding-schedule .images-container span {
+  margin-left: 10px;
 }
 
 /* Section wedding schedule */
@@ -313,7 +336,9 @@ body {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
+  .section-wedding-schedule .images-container > * {
+    font-size: 16px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -420,15 +445,16 @@ body {
   .section-wedding-schedule {
     border-top: none;
     border-left: 50px solid #95AAA6;
+    position: relative;
   }
 
-  .section-wedding-schedule h2 {
+  .section-wedding-schedule .bg-img {
     display: inline-block;
-    vertical-align: middle;
   }
 
-  .section-wedding-schedule img {
-    vertical-align: middle;
+  .section-wedding-schedule .images-container > * {
+    font-size: 18px;
+    margin-bottom: 15px;
   }
 
   .section-wedding-photos {
