@@ -265,7 +265,7 @@ body {
   position: absolute;
   height: 100vh;
   top: 0;
-  right: -280px;
+  transform: translateX(530px);
   border-radius: 13%;
 }
 
@@ -308,6 +308,10 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-bottom: 2px solid #444;
+}
+
+.section-wedding-photos .img-container img {
+  display: block; 
 }
 
 .section-wedding-photos h2 {
@@ -381,7 +385,7 @@ body {
   }
 
   .section-welcome img {
-    display: inline-block;
+    display: block;
     transform: translateX(160px);
   }
 
