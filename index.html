@@ -175,15 +175,15 @@
 
         function countDown() {
             const now = new Date().getTime(); 
-            const t = deadline - now;
+            const t = Math.abs(deadline - now);
             const days = Math.floor(t / (1000 * 60 * 60 * 24)); 
             const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
             const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((t % (1000 * 60)) / 1000);
-            document.getElementById("days").innerHTML = Math.abs(days) + ' dní';
-            document.getElementById("hours").innerHTML = Math.abs(hours) + " hod.";
-            document.getElementById("minutes").innerHTML = Math.abs(minutes) + " min.";
-            document.getElementById("seconds").innerHTML = Math.abs(seconds) + " sek.";
+            document.getElementById("days").innerHTML = days + ' dní';
+            document.getElementById("hours").innerHTML = hours + " hod.";
+            document.getElementById("minutes").innerHTML = minutes + " min.";
+            document.getElementById("seconds").innerHTML = seconds + " sek.";
 
             return t;
         }
