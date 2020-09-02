@@ -38,7 +38,7 @@
             <section class="section-welcome">
                 <div class="bude-svadba-container">
                     <div class="bude-svadba">
-                        <h1>BUDE SVADBA!</h1>
+                        <h1>SME SVOJI! UŽ...</h1>
                         <div class="countdown">
                             <div id="days" class="countdown__circle"></div>
                             <div id="hours" class="countdown__circle"></div>
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div class="img-container">
-                        <img src="./imgs/us.jpg" alt="matka and ati">
+                        <img src="./imgs/us2.jpg" alt="matka and ati">
                     </div>
                 </div>
             </section>
@@ -129,7 +129,10 @@
                 <div class="img-container"></div>
                 <div>
                     <h2>Fotky zo svadobného dňa nájdete tu:</h2>
-                    <img src="./imgs/icons/heart.png" alt="heart icon">
+                    <a class="photos-link" href="https://drive.google.com/file/d/1zecEp7V834V8nCTIxj2zmn92RFp8jlOc/view?usp=sharing" target="_blank">
+                        <img src="./imgs/icons/heart.png" alt="heart icon">
+                        <span>klik :)</span>
+                    </a>
                 </div>
             </section>
         </div>
@@ -177,10 +180,10 @@
             const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
             const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((t % (1000 * 60)) / 1000);
-            document.getElementById("days").innerHTML = days > 1 ? days + " dni" : days + " deň";
-            document.getElementById("hours").innerHTML = hours + " hod.";
-            document.getElementById("minutes").innerHTML = minutes + " min.";
-            document.getElementById("seconds").innerHTML = seconds + " sek.";
+            document.getElementById("days").innerHTML = Math.abs(days) + ' dní';
+            document.getElementById("hours").innerHTML = Math.abs(hours) + " hod.";
+            document.getElementById("minutes").innerHTML = Math.abs(minutes) + " min.";
+            document.getElementById("seconds").innerHTML = Math.abs(seconds) + " sek.";
 
             return t;
         }
@@ -213,11 +216,6 @@
                 mybutton.style.display = "none";
             }
         }
-
-        // function topFunction() {
-        //     document.body.scrollTop = 0; // For Safari
-        //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        // }
     </script>
 </body>
 </html>
